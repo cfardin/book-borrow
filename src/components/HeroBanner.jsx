@@ -12,7 +12,7 @@ const HeroBanner = () => {
           <div>
             <h1 className="text-5xl font-bold">Find Your Next Read</h1>
     
-            <Link href={"/all-books"} className="btn bg-green-400 text-white mt-6 text-2xl font-bold p-6"> Browse Now</Link>
+            <Link href={"/all-books"} className="btn bg-amber-200 mt-6 text-2xl font-bold p-6"> Browse Now</Link>
           </div>
         </div>
       </div>

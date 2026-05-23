@@ -1,0 +1,26 @@
+
+import BookCard from './BookCard';
+
+
+const FeatureBooks = async() => {
+
+    const res = await fetch("https://book-data-1-jecr.onrender.com/data");
+    const data = await res.json();
+    const books = data.slice(0, 4);
+
+    return (
+        <div className='container mx-auto my-20 space-y-5'>
+            <div>
+                <h3 className='text-3xl font-bold'>Feature Books</h3>
+            </div>
+            <div className='grid grid-cols-4 gap-3'>
+                {
+                    books.map(b => <BookCard key={b.id} b={b}></BookCard>)
+                }
+            </div>
+        </div>
+       
+    );
+};
+
+export default FeatureBooks;

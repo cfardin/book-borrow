@@ -18,7 +18,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "media.istockphoto.com",
+        hostname: "i.ibb.co.com",
         port: "",
         pathname: "**",
       },

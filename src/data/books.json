@@ -1,155 +1,146 @@
 [
   {
-    "id": "book-011",
-    "title": "Cybersecurity Fundamentals and Zero Trust",
-    "author": "Rachel Green",
-    "description": "A vital security blueprint for modern IT professionals focusing on identity verification, network segmentation, and threat mitigation.",
-    "category": "Tech",
-    "available_quantity": 15,
-    "image_url": "https://example.com/images/cybersecurity-zero-trust.jpg"
-  },
-  {
-    "id": "book-015",
-    "title": "The Book Thief",
+    "id": "book-002",
+    "title": "The Book Thief ",
     "author": "Markus Zusak",
     "description": "Narrated by Death, this poignant story follows a young girl named Liesel living in Nazi Germany, who finds solace and survival by stealing books and sharing them with her foster family and the Jewish man hidden in her basement.",
     "category": "Story",
     "available_quantity": 21,
-    "image_url": "https://example.com/images/the-book-thief.jpg"
+    "image_url": "https://i.ibb.co.com/xTnCJCk/image.png"
+  },
+  {
+    "id": "book-004",
+    "title": "Echoes of the Forgotten ",
+    "author": "Michael Nunn",
+    "description": "On the first night of their third year of university, five students disappear without a trace. Three days later, Will Campbell is found miles away, in the middle of the countryside, covered in somebody else’s blood. His friends are nowhere to be found. And Will can’t remember anything except a fairground and a haunting man with a crooked smile.",
+    "category": "Horror",
+    "available_quantity": 14,
+    "image_url": "https://i.ibb.co.com/zT9yQFt1/image.png"
   },
   {
     "id": "book-005",
-    "title": "Mastering TypeScript and Next.js",
-    "author": "Kenji Takahashi",
-    "description": "Step-by-step tutorials for building fast, type-safe full-stack web applications with server-side rendering.",
-    "category": "Tech",
-    "available_quantity": 31,
-    "image_url": "https://example.com/images/mastering-typescript-nextjs.jpg"
-  },
-  {
-    "id": "book-001",
-    "title": "Echoes of the Forgotten Valley",
-    "author": "Elena Rostova",
-    "description": "A gripping historical fiction novel about a hidden community in the Ural Mountains guarding a century-old secret.",
-    "category": "Story",
-    "available_quantity": 14,
-    "image_url": "https://example.com/images/echoes-forgotten-valley.jpg"
-  },
-  {
-    "id": "book-017",
-    "title": "Who Moved My Cheese?",
+    "title": "Who Moved My Cheese? ",
     "author": "Spencer Johnson",
     "description": "An influential business fable featuring four characters trapped in a maze who react differently to sudden changes in their environment, offering valuable life lessons on adapting quickly to disruption.",
     "category": "Story",
     "available_quantity": 50,
-    "image_url": "https://example.com/images/who-moved-my-cheese.jpg"
+    "image_url": "https://i.ibb.co.com/93VVDJ7x/image.png"
   },
   {
-    "id": "book-008",
-    "title": "Practical Neural Networks with Python",
-    "author": "Liam O'Connor",
-    "description": "A hands-on approach to implementing machine learning models, from basic perceptrons to advanced computer vision applications.",
-    "category": "Tech",
-    "available_quantity": 17,
-    "image_url": "https://example.com/images/practical-neural-networks.jpg"
-  },
-  {
-    "id": "book-013",
-    "title": "The Alchemist",
+    "id": "book-007",
+    "title": "The Alchemist ",
     "author": "Paulo Coelho",
     "description": "An allegorical novel following a young Andalusian shepherd named Santiago on his journey to Egypt in search of a worldly treasure, discovering the true meaning of his 'Personal Legend' along the way.",
     "category": "Story",
     "available_quantity": 45,
-    "image_url": "https://example.com/images/the-alchemist.jpg"
+    "image_url": "https://i.ibb.co.com/YFVjgSL1/image.png"
   },
   {
-    "id": "book-003",
-    "title": "The Quantum Horizon",
+    "id": "book-008",
+    "title": "The Quantum Horizon ",
     "author": "Dr. Sarah Jenkins",
     "description": "An accessible exploration of quantum mechanics, entanglement, and how the subatomic world shapes our macro reality.",
-    "category": "Science",
+    "category": "Non-Fiction",
     "available_quantity": 22,
-    "image_url": "https://example.com/images/quantum-horizon.jpg"
+    "image_url": "https://i.ibb.co.com/XfHmBYMT/image.png"
   },
   {
-    "id": "book-009",
-    "title": "Origins of the Cosmos",
-    "author": "Prof. Alan Wu",
-    "description": "An astrophysical journey tracing the universe from the Big Bang through cosmic inflation to the formation of early galaxies.",
-    "category": "Science",
-    "available_quantity": 12,
-    "image_url": "https://example.com/images/origins-cosmos.jpg"
-  },
-  {
-    "id": "book-014",
-    "title": "1984",
-    "author": "George Orwell",
-    "description": "A chilling dystopian masterpiece exploring the psychological terrors of life under Big Brother, totalitarian surveillance, omnipresent government manipulation, and the erasure of individual free thought.",
-    "category": "Story",
-    "available_quantity": 38,
-    "image_url": "https://example.com/images/1984.jpg"
-  },
-  {
-    "id": "book-007",
-    "title": "The Last Cartographer",
-    "author": "Amara Diallo",
-    "description": "An epic adventure story of a young mapmaker navigating a rapidly changing world where continents physically shift overnight.",
-    "category": "Story",
-    "available_quantity": 11,
-    "image_url": "https://example.com/images/last-cartographer.jpg"
-  },
-  {
-    "id": "book-002",
-    "title": "Designing Distributed Systems at Scale",
-    "author": "Marcus Vance",
-    "description": "A comprehensive guide to building resilient, fault-tolerant, and highly available cloud applications using modern microservices.",
-    "category": "Tech",
-    "available_quantity": 8,
-    "image_url": "https://example.com/images/designing-distributed-systems.jpg"
-  },
-  {
-    "id": "book-010",
-    "title": "Beneath the Neon Rain",
-    "author": "Sasha Petrov",
-    "description": "A fast-paced cyberpunk detective story set in a dystopian mega-city controlled by algorithmic corporate syndicates.",
-    "category": "Story",
-    "available_quantity": 25,
-    "image_url": "https://example.com/images/beneath-neon-rain.jpg"
-  },
-  {
-    "id": "book-006",
-    "title": "Bioluminescence: Nature's Living Light",
-    "author": "Dr. Aris Thorne",
-    "description": "A deep-dive marine biology study into the chemical processes and evolutionary purposes of glowing deep-sea organisms.",
-    "category": "Science",
-    "available_quantity": 5,
-    "image_url": "https://example.com/images/bioluminescence.jpg"
-  },
-  {
-    "id": "book-016",
-    "title": "Before the Coffee Gets Cold",
+    "id": "book-015",
+    "title": "Before the Coffee Gets Cold ",
     "author": "Toshikazu Kawaguchi",
     "description": "A comforting yet melancholic tale set in a small Tokyo café where customers are given the unique chance to travel back in time, provided they follow strict rules and return before their coffee gets cold.",
     "category": "Story",
     "available_quantity": 17,
-    "image_url": "https://example.com/images/before-the-coffee-gets-cold.jpg"
+    "image_url": "https://i.ibb.co.com/Z1vL7JWf/image.png"
   },
   {
-    "id": "book-012",
-    "title": "The Hidden Intelligence of Plants",
-    "author": "Dr. Miranda Geller",
-    "description": "An groundbreaking botanical study demonstrating how root systems communicate, share resources, and defend against threats.",
-    "category": "Science",
-    "available_quantity": 9,
-    "image_url": "https://example.com/images/intelligence-of-plants.jpg"
-  },
-  {
-    "id": "book-004",
-    "title": "Midnight at the Clockwork Café",
-    "author": "Julian Vance",
-    "description": "A whimsical urban fantasy story following a lonely barista who discovers her late-night customers are time travelers.",
+    "id": "book-018",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "description": "A timeless masterpiece that delves into the decadence and disillusionment of the Jazz Age, exploring themes of wealth, love, and the American Dream in the Roaring Twenties.",
     "category": "Story",
-    "available_quantity": 19,
-    "image_url": "https://example.com/images/clockwork-cafe.jpg"
+    "available_quantity": 15,
+    "image_url": "https://i.ibb.co.com/khHN7Pk/9780143454212.jpg"
+  },
+  {
+    "id": "book-019",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "description": "A profound exploration of racial injustice and the destruction of innocence in the American South, seen through the eyes of young Scout Finch.",
+    "category": "Story",
+    "available_quantity": 24,
+    "image_url": "https://i.ibb.co.com/0cv102J/To-Kill-a-Mockingbird.webp"
+  },
+  {
+    "id": "book-020",
+    "title": "1984",
+    "author": "George Orwell",
+    "description": "A chilling dystopian masterpiece exploring the psychological terrors of life under Big Brother, totalitarian surveillance, and the erasure of individual free thought.",
+    "category": "Story",
+    "available_quantity": 18,
+    "image_url": "https://i.ibb.co.com/MprDyVt/51-BIA4rrae-L-AC-UF1000-1000-QL80.jpg"
+  },
+  {
+    "id": "book-021",
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "description": "The classic coming-of-age story tracking the disillusioned teenager Holden Caulfield as he wanders New York City examining the 'phoniness' of the adult world.",
+    "category": "Story",
+    "available_quantity": 12,
+    "image_url": "https://i.ibb.co.com/tYSWRfG/catcherrye-edited-1-800x.png"
+  },
+  {
+    "id": "book-022",
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "description": "A romantic classic exploring the turbulent relationship between Elizabeth Bennet and Fitzwilliam Darcy, masterfully critiquing class and societal expectations.",
+    "category": "Story",
+    "available_quantity": 22,
+    "image_url": "https://i.ibb.co.com/YdQDMpn/81me-ud-V63-L-AC-UF1000-1000-QL80.jpg"
+  },
+  {
+    "id": "book-023",
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "description": "An epic adventure following the reluctant Bilbo Baggins as he leaves his peaceful home to help a group of dwarves reclaim their stolen treasure from a dragon.",
+    "category": "Story",
+    "available_quantity": 30,
+    "image_url": "https://i.ibb.co.com/xS8YvxL/81m-CE-uclx-L-UF1000-1000-QL80.jpg"
+  },
+  {
+    "id": "book-024",
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "description": "The magical story of an orphaned boy who discovers his wizarding heritage and attends Hogwarts School of Witchcraft and Wizardry.",
+    "category": "Story",
+    "available_quantity": 40,
+    "image_url": "https://i.ibb.co.com/989qMRW/42844155.jpg"
+  },
+  {
+    "id": "book-025",
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "description": "An allegorical novel following an Andalusian shepherd named Santiago in search of a worldly treasure, discovering the true meaning of his 'Personal Legend'.",
+    "category": "Story",
+    "available_quantity": 35,
+    "image_url": "https://i.ibb.co.com/zS9jsdK/18144590.jpg"
+  },
+  {
+    "id": "book-026",
+    "title": "The Girl on the Train",
+    "author": "Paula Hawkins",
+    "description": "A psychological thriller about an alcoholic commuter who becomes entangled in a missing persons investigation after witnessing something shocking from her train window.",
+    "category": "Story",
+    "available_quantity": 14,
+    "image_url": "https://i.ibb.co.com/P6hfCmJ/Whats-App-Image-2024-05-22-at-11-21-25-2e21ae46.jpg"
+  },
+  {
+    "id": "book-027",
+    "title": "The Art of War",
+    "author": " Sun Tzu",
+    "description": "A timeless masterpiece of strategy and insight, The Art of War by Sun Tzu is one of the most influential works ever written on leadership, warfare, and the psychology of conflict. Composed in ancient China around the 5th century BC, this legendary treatise goes beyond military tactics; it teaches how to lead, think, adapt, and triumph in any arena of life.",
+    "category": "Non-Fiction",
+    "available_quantity": 14,
+    "image_url": "https://i.ibb.co.com/fT1Bcs9/image.png"
   }
 ]
