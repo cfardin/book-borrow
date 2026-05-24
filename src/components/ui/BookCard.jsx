@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const BookCard = ({b}) => {
@@ -14,7 +15,7 @@ const BookCard = ({b}) => {
         <p className="text-sm line-clamp-2">{b.description}</p>
         <p className="text-green-600 font-semibold">{b.available_quantity} available</p>
         <div className="card-actions">
-          <button className="btn btn-neutral w-full">View Details</button>
+          <Link href={`/all-books/${b.id}`} className="btn btn-neutral w-full">View Details</Link>
         </div>
       </div>
     </div>

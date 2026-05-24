@@ -1,6 +1,6 @@
 
 import getBooks from '@/lib/getBooks';
-import BookCard from './BookCard';
+import BookCard from './ui/BookCard';
 
 
 const FeatureBooks = async() => {
@@ -11,7 +11,7 @@ const FeatureBooks = async() => {
     const books = await getBooks();
 
     return (
-        <div className='md:container mx-auto my-20 space-y-5'>
+        <div className='md:container mx-auto my-50 space-y-5'>
             <div>
                 <h3 className='text-3xl font-bold'>Feature Books</h3>
             </div>

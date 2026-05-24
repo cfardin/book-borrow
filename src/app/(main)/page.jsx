@@ -14,7 +14,6 @@ const page = () => {
       <FeatureBooks></FeatureBooks>
       <Category></Category>
       <Readers></Readers>
-      <Footer></Footer>
     </div>
   );
 };
