@@ -1,13 +1,23 @@
 import getBooksById from '@/lib/getBooksById';
 import Image from 'next/image';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
 import React from 'react';
+import NotFound from './not-found';
 
 
 
 const BookInfoById = async ({ params }) => {
     const { id } = await params;
     console.log(id);
-    const { title, author, description, category, available_quantity, image_url } = await getBooksById(id);
+    const bookInfo = await getBooksById(id);
+    const { title, author, description, category, available_quantity, image_url } = bookInfo;
+
+
+     if (!bookInfo) {
+     return <NotFound></NotFound>
+    }
+
 
     return (
         <div className="container mx-auto my-20 flex gap-10">
