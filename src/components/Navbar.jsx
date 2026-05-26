@@ -17,7 +17,7 @@ const Navbar = () => {
     const {data : session} = authClient.useSession();
     const user = session?.user;
 
-    console.log(user);
+    // console.log(user);
 
   return (
     <div className="navbar bg-base-100 shadow-sm container mx-auto">

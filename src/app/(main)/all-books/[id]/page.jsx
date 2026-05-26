@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import React from 'react';
 import NotFound from './not-found';
+import { toast } from 'react-toastify';
+import BorrowBtn from '@/components/ui/BorrowBtn';
 
 
 
@@ -45,7 +47,8 @@ const BookInfoById = async ({ params }) => {
                 </div>
                 <hr className="mb-6" />
 
-                <button className="btn btn-neutral mr-4">Borrow This Book</button>
+                {/* <button onClick={() => toast("Added to Borrow List")} className="btn btn-neutral mr-4">Borrow This Book</button> */}
+                <BorrowBtn></BorrowBtn>
             </div>
         </div>
     );

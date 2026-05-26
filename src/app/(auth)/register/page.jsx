@@ -28,12 +28,13 @@ const RegisterPage = () => {
 
         console.log(data, error);
         if(error){
-          // toast(error.message);
-          alert(error.message);
+          toast.error(error.message);
+          // alert(error.message);
         }
 
         if(data){
-          toast("Registration Successful");
+          toast.success("Registration Successful");
+          callbackURL("/")
         }
 
     }
@@ -84,13 +85,13 @@ const RegisterPage = () => {
           </fieldset>
 
           {/* password */}
-          <fieldset className="fieldset">
+          {/* <fieldset className="fieldset">
             <legend className="fieldset-legend">Password</legend>
             <input
             {...register("password", {required : "password is required"})} 
             type="password" className="input" placeholder="password" />
             {errors.password && <p className="text-red-500">{errors.password.message}</p>}
-          </fieldset>
+          </fieldset> */}
 
           <fieldset className="fieldset relative">
             <legend className="fieldset-legend">Password</legend>
