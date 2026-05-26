@@ -1,8 +1,10 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { GiBookshelf } from "react-icons/gi";
 import userPic from "@/assets/user.png";
+import { authClient } from "@/lib/auth-client";
 
 
 const Navbar = () => {
@@ -11,6 +13,12 @@ const Navbar = () => {
         <li><Link href={"/all-books"}>All-Books</Link></li>
         <li><Link href={"/profile"}>Profile</Link></li>
     </>
+
+    const {data : session} = authClient.useSession();
+    const user = session?.user;
+
+    console.log(user);
+
   return (
     <div className="navbar bg-base-100 shadow-sm container mx-auto">
       <div className="navbar-start">
@@ -47,9 +55,14 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="flex gap-5 navbar-end">
-         <h2>{""}</h2>
-                <Image src={userPic} alt='user pic' width={40} height={40} ></Image>
-        <Link href={"/login"} className="btn font-bold">Login</Link>
+        {
+          user &&  <h2>Hello {user?.name}</h2>
+        }
+        <img src={user?.image || userPic.src} alt='user pic' width={40} height={40} className="rounded-full"></img>
+        {
+          user ? <Link href={"/login"} onClick={async() => await authClient.signOut()} className="btn font-bold">Log Out</Link> : <Link href={"/login"} className="btn font-bold">Login</Link>
+        }
+        
       </div>
     </div>
   );
