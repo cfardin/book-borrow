@@ -2,14 +2,15 @@
 import { authClient } from "@/lib/auth-client";
 import { error } from "better-auth/api";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { FaGoogle } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 
 const LoginPage = () => {
 
     const {register, handleSubmit, formState : {errors}} = useForm()
 
+    const [isShowPassword, setIsShowPassword] = useState(false);
 
     const handleLogin = async(userData) =>{
       console.log(userData);
@@ -32,6 +33,11 @@ const LoginPage = () => {
     }
 
 
+    const handleGoogleSignIn = async() =>{
+      const data = await authClient.signIn.social({
+            provider: "google",
+      });
+    }
 
 
 
@@ -55,17 +61,25 @@ const LoginPage = () => {
           </fieldset>
 
           {/* password */}
-          <fieldset className="fieldset">
+          <fieldset className="fieldset relative">
             <legend className="fieldset-legend">Password</legend>
-            <input
-            {...register("password", {required : "password is required"})} 
-            type="password" className="input" placeholder="password" />
+            <div className="flex gap-3">
+              <input
+              {...register("password", {required : "password is required"})} 
+              type={isShowPassword ? "text" : "password"}className="input" placeholder="password" />
+              <button className="absolute right-4 top-4 cursor-pointer" onClick={() => setIsShowPassword(!isShowPassword)}>
+                {isShowPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}
+              </button>
+            </div>
+
             {errors.password && <p className="text-red-500">{errors.password.message}</p>}
+            
           </fieldset>
 
-          <div className="flex gap-2 justify-center items-center">
-            <button className="w-full bg-slate-900 text-white btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">Login</button>
-           
+          <div className="flex gap-2 justify-center items-center mt-8">
+            <button className=" w-40 bg-slate-900 text-white btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">Login</button>
+            <button onClick={handleGoogleSignIn} className="w-40 border-slate-700 text-slate-700 btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl"><FaGoogle className="" />Google</button>
+
           </div>
        
 
@@ -73,7 +87,7 @@ const LoginPage = () => {
         <p>Do not have an account ? <Link href={"/register"} className="text-red-500">Register</Link></p> 
       </div>
 
-      <Link href={"/"} className="mt-5 shadow-2xl btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl"><FaGoogle />Continue with Google</Link>
+      {/* <Link href={"/"} onClick={handleGoogleSignIn} className="mt-5 shadow-2xl btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl"><FaGoogle />Continue with Google</Link> */}
     </div>
   );
 };

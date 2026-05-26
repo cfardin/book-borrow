@@ -2,14 +2,17 @@
 import { authClient } from "@/lib/auth-client";
 import { error } from "better-auth/api";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { FaGoogle } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 import { toast } from "react-toastify";
+
 
 const RegisterPage = () => {
 
-    const {register, handleSubmit, formState : {errors}} = useForm()
+    const {register, handleSubmit, formState : {errors}} = useForm();
+    const [isShowPassword, setIsShowPassword] = useState(false);
+
 
 
     const handleLogin = async(userData) =>{
@@ -35,10 +38,16 @@ const RegisterPage = () => {
 
     }
 
+    const handleGoogleSignIn = async() =>{
+       const data = await authClient.signIn.social({
+        provider: "google",
+      });
+    }
+
 
 
   return (
-    <div className="flex justify-center items-center min-h-[80vh] container mx-auto ">
+    <div className="flex justify-center items-center min-h-[80vh] container mx-auto mt-20">
 
       <div className="bg-amber-100 p-10 w-100 rounded-lg space-y-4 shadow-2xl">
         <h2 className="text-center font-bold">
@@ -83,9 +92,23 @@ const RegisterPage = () => {
             {errors.password && <p className="text-red-500">{errors.password.message}</p>}
           </fieldset>
 
-          <button className="bg-slate-900 text-white w-full btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">Register</button>
-          <button className="w-full btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl"><FaGoogle /> Register with Google</button>
+          <fieldset className="fieldset relative">
+            <legend className="fieldset-legend">Password</legend>
+            <div className="flex gap-3">
+              <input
+                {...register("password", {required : "password is required"})} 
+                type={isShowPassword ? "text" : "password"}className="input" placeholder="password" />
+                <button className="absolute right-4 top-4 cursor-pointer" onClick={() => setIsShowPassword(!isShowPassword)}>
+                    {isShowPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}
+                </button>
+            </div>      
+          </fieldset>
 
+          <div className="flex flex-col gap-2 mt-8">
+            <button className="bg-slate-900 text-white w-full btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">Register</button>
+            <p className="text-center">Or</p>
+            <button onClick={handleGoogleSignIn} className="w-full border-slate-700 text-slate-700 btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl"><FaGoogle className="" />Register with Google</button>
+          </div>
 
 
         </form>

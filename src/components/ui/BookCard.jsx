@@ -4,7 +4,7 @@ import React from 'react';
 
 const BookCard = ({b}) => {
   return (
-    <div className="card bg-base-100 shadow-md ">
+    <div className="card bg-base-100 shadow-xl ">
       <figure>
         <Image src={b.image_url} alt={b.title} width={300} height={350} className="rounded-lg mt-2.5"></Image>
       </figure>
