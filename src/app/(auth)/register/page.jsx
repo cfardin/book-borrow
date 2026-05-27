@@ -108,11 +108,14 @@ const RegisterPage = () => {
           <div className="flex flex-col gap-2 mt-8">
             <button className="bg-slate-900 text-white w-full btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">Register</button>
             <p className="text-center">Or</p>
-            <button onClick={handleGoogleSignIn} className="w-full border-slate-700 text-slate-700 btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl"><FaGoogle className="" />Register with Google</button>
+            {/* <button onClick={handleGoogleSignIn} className="w-full border-slate-700 text-slate-700 btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl"><FaGoogle className="" />Register with Google</button> */}
           </div>
 
 
         </form>
+        <div>
+           <button onClick={handleGoogleSignIn} className="w-full border-slate-700 text-slate-700 btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl"><FaGoogle className="" />Register with Google</button>
+        </div>
       </div>
     </div>
   );

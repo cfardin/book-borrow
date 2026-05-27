@@ -80,13 +80,16 @@ const LoginPage = () => {
           </fieldset>
 
           <div className="flex gap-2 justify-center items-center mt-8">
-            <button className=" w-40 bg-slate-900 text-white btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">Login</button>
-            <button onClick={handleGoogleSignIn} className="w-40 border-slate-700 text-slate-700 btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl"><FaGoogle className="" />Google</button>
+            <button className=" w-full bg-slate-900 text-white btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">Login</button>
+            {/* <button onClick={handleGoogleSignIn} className=" border-slate-700 text-slate-700 btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl"><FaGoogle className="" />Google</button> */}
 
           </div>
        
 
         </form>
+        <div className="flex justify-center items-center ">
+          <button onClick={handleGoogleSignIn} className="w-full border-slate-700 text-slate-700 btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl"><FaGoogle className="" />Google</button>
+        </div>
         <p>Do not have an account ? <Link href={"/register"} className="text-red-500">Register</Link></p> 
       </div>
 
