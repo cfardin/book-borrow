@@ -1,10 +1,8 @@
 import getBooksById from '@/lib/getBooksById';
 import Image from 'next/image';
-import Link from 'next/link';
-import { notFound } from 'next/navigation';
 import React from 'react';
 import NotFound from './not-found';
-import { toast } from 'react-toastify';
+
 import BorrowBtn from '@/components/ui/BorrowBtn';
 
 
@@ -17,7 +15,7 @@ const BookInfoById = async ({ params }) => {
 
 
      if (!bookInfo) {
-     return <NotFound></NotFound>
+       return <NotFound></NotFound>
     }
 
 
