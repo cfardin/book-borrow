@@ -1,30 +1,49 @@
-import Link from 'next/link';
+"use client"
+import { authClient } from '@/lib/auth-client';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 
-const categories = [
-    "All",
-    "Novel",
-    "Story",
-    "Horror",
-    "Non-Fiction"
-]
 
-const page = () => {
-    return (
-        <div>
-      <h3 className="text-lg font-bold">All Categories</h3>
-      <ul className="flex flex-col gap-3 mt-4 p-2">
-        {categories.map((c) => (
-          <li
-            className={`${activeId === c.category_id && "bg-gray-500 text-white"} p-2 text-xl font-bold rounded-md text-center`}
-            key={c.category_id}
-          >
-            <Link href={`/`} className="block">{c.category_name}</Link> 
-          </li>
-        ))}
-      </ul>
-    </div>
-    );
+
+const ProfileUpdate = () => {
+  const r = useRouter()
+
+  const handleUpdate = async(e) => {
+    e.preventDefault();
+
+    await authClient.updateUser({
+      name : e.target.newName.value,
+      image : e.target.photo.value,
+
+    });
+
+    r.push("/profile");
+
+  }
+
+  return (
+     <div className="flex flex-col justify-center items-center  container mx-auto my-20 max-w-md">
+            <h1 className="text-3xl font-bold mb-8">Update Profile</h1>
+
+            <form onSubmit={handleUpdate} className='text-left'>
+
+              {/* update name */}
+              <fieldset className="fieldset">
+                <legend className="fieldset-legend">Enter your updated name</legend>
+                <input name='newName' type="text" className="input" placeholder="Type here" />
+              </fieldset>
+
+              {/* update photo */}
+              <fieldset className="fieldset">
+                <legend className="fieldset-legend">Enter the URL of new picture</legend>
+                <input name='photo' type="text" className="input" placeholder="Photo URL" />
+              </fieldset>
+
+
+              <button className="btn btn-neutral mt-4">Update</button>
+            </form>
+        </div>
+  );
 };
 
-export default page;
+export default ProfileUpdate;

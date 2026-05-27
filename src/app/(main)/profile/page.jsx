@@ -2,6 +2,7 @@
 import { authClient } from '@/lib/auth-client';
 import React from 'react';
 import userPic from '@/assets/user.png'
+import Link from 'next/link';
 
 
 
@@ -37,7 +38,7 @@ const ProfilePage = () => {
                     <p>Account Created</p>
                     <p className="font-semibold">{new Date(user?.createdAt).toLocaleDateString()}</p>
 
-                    <button className="btn btn-neutral w-full mt-4">Update Profile</button>
+                    <Link href={"/profile/profile-update"} className="btn btn-neutral w-full mt-4">Update Profile</Link>
                 </div>
             </div>
         </div>

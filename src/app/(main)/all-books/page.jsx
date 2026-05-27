@@ -123,6 +123,7 @@ const categories = [
 const AllBooksPage = () => {
   const [books, setBooks] = useState([]);
   const [query, setQuery] = useState("");
+
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   useEffect(() => {
@@ -142,6 +143,8 @@ const AllBooksPage = () => {
       .toLowerCase()
       .includes(query.toLowerCase());
 
+
+      
     const matchesCategory =
       selectedCategory === "All" ||
       book.category?.toLowerCase() ===

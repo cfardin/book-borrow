@@ -59,6 +59,7 @@ const Navbar = () => {
           user &&  <h2>Hello {user?.name}</h2>
         }
         <img src={user?.image || userPic.src} alt='user pic' width={40} height={40} className="rounded-full"></img>
+        
         {
           user ? <Link href={"/login"} onClick={async() => await authClient.signOut()} className="btn font-bold">Log Out</Link> : <Link href={"/login"} className="btn font-bold">Login</Link>
         }
