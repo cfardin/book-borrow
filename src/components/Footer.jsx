@@ -6,7 +6,7 @@ import { MdEmail } from "react-icons/md";
 const Footer = () => {
   return (
     <footer className="bg-amber-100 mt-40 px-10 py-30">
-      <div className="flex justify-around gap-10 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-8 w-9/12 mx-auto">
         
         <div>
           <h4 className="font-bold text-lg mb-3"><GiBookshelf/>Book-Borrow</h4>
@@ -31,7 +31,10 @@ const Footer = () => {
           </ul>
         </div>
 
+
       </div>
+
+
       <div className="border-t pt-6 text-center text-gray-400 text-sm">
         © 2025 LibraFlow. All rights reserved.
       </div>
